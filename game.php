@@ -47,6 +47,22 @@
   </div>
 </div>
 
+<button class="chat-btn col-md-3" id="chat_btn">
+    <p class="chat-welcome text-center col-md-12"><span class="text-left">ต้องการคำใบ้ คุยกับเราสิ</span>&ensp;<i class="fa fa-angle-up arrow text-right" aria-hidden="true"></i></p>
+</button>
+<div class="chat-box col-md-3">
+  <iframe
+    allow="microphone;"
+    width="100%"
+    height="100%"
+    class="dialog-flow-frame"
+    src="https://console.dialogflow.com/api-client/demo/embedded/b561eab2-8ef6-4162-8dde-96e547c87b7c">
+  </iframe>
+</div>
+
+<!-- jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script>
   const data = {
       "questions":{
@@ -72,6 +88,8 @@
           }
       }
   }
+
+  var score = 0
 
   var timerSeconds = new Date().getTime()
   var nextTime = 0
@@ -128,4 +146,41 @@
       var seconds = Math.ceil(timerSeconds % 60);
       return minutes + ':' + (seconds < 10 ? '0' : '') + seconds
   }
+
+  /*
+  * sleep
+  * sleep the porcess 
+  * @input milliseconds
+  * @output -
+  * @author Tanaphon Kleaklom (TL)
+  * @create Date 2018-10-09
+  */
+  const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
+  }
+
+  $('.chat-footer').hide()
+  $('.popup-area').hide()
+
+  $('#chat_btn').click(function(){
+      if ( !$('.chat-box').hasClass('chat-box-active') ) {
+          $('.chat-footer').show()
+          $('.popup-area').show()
+          $('.chat-box').addClass('chat-box-active')
+          $(this).addClass('chat-btn-active')
+          sleep(400).then(() => {
+              $('.arrow').removeClass('fa-angle-up')
+              $('.arrow').addClass('fa-angle-down')
+          })
+      } else {
+          $('.chat-box').removeClass('chat-box-active')
+          $(this).removeClass('chat-btn-active')
+          sleep(400).then(() => {
+              $('.chat-footer').hide()
+              $('.popup-area').hide()
+              $('.arrow').addClass('fa-angle-up')
+              $('.arrow').removeClass('fa-angle-down')
+          })
+      }
+  })
 </script>
