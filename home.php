@@ -33,7 +33,7 @@
                 <div class="card-body text-center">
                   <div class="row ">
                     <div class="col-xl-8">
-                      <canvas id="myChart" width="250" height="250"></canvas>
+                      <canvas id="myChart" width="300" height="300" style='margin-left:auto;margin-right:auto'></canvas>
                       <script>
                       var ctx = document.getElementById("myChart").getContext('2d');
                       var myChart = new Chart(ctx, {
@@ -66,7 +66,7 @@
                           scale: {
                               ticks: {
                                   beginAtZero: true,
-                                  max: 5
+                                  max: 10
                               }
                             }
                           }
@@ -74,7 +74,10 @@
                       </script>
                     </div>
                     <div class="col-xl-4" style="margin-top:auto;margin-bottom:auto">
-                      <img src="img/iconfinder_3_avatar_2754579 (1).png" alt="..." class="img-thumbnail">
+                      <img src="https://image.flaticon.com/icons/svg/1332/1332044.svg" alt="..." class="img-thumbnail">
+                      <div>
+                        Type 1 Perfectionist
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -96,11 +99,11 @@
                         <th colspan="5">Score</th>
                       </tr>
                       <tr>
-                        <th>English</th>
-                        <th>PHP</th>
-                        <th>HTML</th>
-                        <th>css</th>
-                        <th>MySQL</th>
+                        <td>English</td>
+                        <td>PHP</td>
+                        <td>HTML</td>
+                        <td>CSS</td>
+                        <td>MySQL</td>
                       </tr>
                     </thead>
                     <tbody>
