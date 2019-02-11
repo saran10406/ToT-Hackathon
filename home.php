@@ -42,7 +42,7 @@
                               labels: ["English", "PHP", "HTML", "CSS", "SQL"],
                               datasets: [{
                                   label: 'Status of Result',
-                                  data: [8, 4, 7, 5, 2, 3],
+                                  data: [8, 4, 7, 5, 2],
                                   backgroundColor: [
                                       'rgba(54, 162, 235, 0.2)',
                                       'rgba(255, 206, 86, 0.2)',
@@ -72,7 +72,7 @@
                       });
                       </script>
                     </div>
-                    <div class="col-xl-4">
+                    <div class="col-xl-4" style="margin-top:auto">
                       <img src="img/iconfinder_3_avatar_2754579 (1).png" alt="..." class="img-thumbnail">
                     </div>
                   </div>
