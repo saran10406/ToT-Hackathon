@@ -156,16 +156,7 @@
                   "3": { "text": "to" }
               }
           },
-          {
-              "text": '“May I……the lights ?” “Of course. But don’t forget to……the lights when you leave.”',
-              "answer_key": "1",
-              "choices":{
-                  "0": { "text": "1" },
-                  "1": { "text": "2" },
-                  "2": { "text": "3" },
-                  "3": { "text": "4" }
-              }
-          },
+
           {
               "text": '"Why don’t you look…..that word in the dictionary if you don’t know its meaning ?"',
               "answer_key": "1",
