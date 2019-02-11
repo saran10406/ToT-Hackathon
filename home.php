@@ -33,7 +33,46 @@
                 <div class="card-body text-center">
                   <div class="row ">
                     <div class="col-xl-8">
-                      Wait For Graph
+                      <canvas id="myChart" width="400" height="400"></canvas>
+                      <script>
+                      var ctx = document.getElementById("myChart").getContext('2d');
+                      var myChart = new Chart(ctx, {
+                          type: 'bar',
+                          data: {
+                              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                              datasets: [{
+                                  label: '# of Votes',
+                                  data: [12, 19, 3, 5, 2, 3],
+                                  backgroundColor: [
+                                      'rgba(255, 99, 132, 0.2)',
+                                      'rgba(54, 162, 235, 0.2)',
+                                      'rgba(255, 206, 86, 0.2)',
+                                      'rgba(75, 192, 192, 0.2)',
+                                      'rgba(153, 102, 255, 0.2)',
+                                      'rgba(255, 159, 64, 0.2)'
+                                  ],
+                                  borderColor: [
+                                      'rgba(255,99,132,1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 206, 86, 1)',
+                                      'rgba(75, 192, 192, 1)',
+                                      'rgba(153, 102, 255, 1)',
+                                      'rgba(255, 159, 64, 1)'
+                                  ],
+                                  borderWidth: 1
+                              }]
+                          },
+                          options: {
+                              scales: {
+                                  yAxes: [{
+                                      ticks: {
+                                          beginAtZero:true
+                                      }
+                                  }]
+                              }
+                          }
+                      });
+                      </script>
                     </div>
                     <div class="col-xl-4">
                       <img src="img/iconfinder_3_avatar_2754579 (1).png" alt="..." class="img-thumbnail">
@@ -48,7 +87,7 @@
                   <i class="fas fa-user"></i> เพื่อนร่วมแผนก
                 </div>
                 <div class="card-body text-center">
-                  <table class="table table-bordered">
+                  <table class="table table-bordered table-responsive table-striped">
                     <thead>
                       <tr>
                         <th rowspan="2">No.</th>
@@ -71,44 +110,44 @@
                         <td>Jiranuwat</td>
                         <td>Jaiyen</td>
                         <td> 1 </td>
-                        <td><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
                       </tr>
                       <tr>
                         <td>2</td>
                         <td>Supapron </td>
                         <td>Wiroonphan</td>
                         <td> 1 </td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
                       </tr>
                       <tr>
                         <td>3</td>
                         <td>Saran </td>
                         <td>Keawnang</td>
                         <td> 1 </td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
                       </tr>
                       <tr>
                         <td>4</td>
                         <td>Tanaphon </td>
                         <td>Kleaklom</td>
                         <td> 1 </td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
-                        <td><i class="fas fa-star"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i><i class="fas fa-star" style="font-size:12px"></i></td>
+                        <td><i class="fas fa-star" style="font-size:12px"></i></td>
                       </tr>
 
                     </tbody>
@@ -124,6 +163,13 @@
               <i class="fas fa-wrench"></i> SKILL
             </div>
             <div class="card-body text-primary">
+              <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
+                <div class="card-body">
+                  <h3 class=""><img src="img/iconfinder_my_sql_682683.png"> English</h3>
+                  <hr />
+                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                </div>
+              </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3><img src="img/iconfinder_php_3069654.png"> PHP</h3>
@@ -148,13 +194,6 @@
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_my_sql_682683.png"> MySQL</h3>
-                  <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
-                </div>
-              </a>
-              <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
-                <div class="card-body">
-                  <h3 class=""><img src="img/iconfinder_my_sql_682683.png"> บุคลิก</h3>
                   <hr />
                   <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
                 </div>
