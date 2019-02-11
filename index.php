@@ -26,13 +26,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fas fa-home fa-2x"></i> HOME <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="./?p=home"><i class="fas fa-home fa-2x"></i> HOME <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-user-tie fa-2x"></i> ABOUT</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="./?p=about"><i class="fas fa-user-tie fa-2x"></i> ABOUT</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-sign-in-alt fa-2x"></i> LOGIN</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="./?p=login"><i class="fas fa-sign-in-alt fa-2x"></i> LOGIN</a>
       </li>
     </ul>
   </div>
@@ -40,19 +40,24 @@
     </nav>
     <div class="container mt-5">
       <?php
-        include("login.php");
+        if($_GET['p'] == 'home'){
+          include("home.php");
+        }else if($_GET['p'] == 'login'){
+          include("login.php");
+        }else if($_GET['p'] == 'about'){
+          include("about.php");
+        }else if($_GET['p'] == 'game'){
+          include("game.php");
+        }else if($_GET['p'] == 'true'){
+          include("true.php");
+        }else if($_GET['p'] == 'false'){
+          include("false.php");
+        }else{
+          include("home.php");
+        }
        ?>
     </div>
-    <footer class="footer">
-      <div class="container mt-3">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-              <a class="nav-link" href="#">TOT Contact Center <i class="fas fa-phone-square"></i> 1100</a>
-          </li>
-        </ul>
 
-      </div>
-    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
