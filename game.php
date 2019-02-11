@@ -3,15 +3,24 @@
     <div class="card-body">
       <div class="row">
         <div class="col-xl-10">
-          <h2 class=""><i class="fas fa-angle-right"></i>&ensp;<span id="qt_text">$sum = 20 + 5; เก็บข้อมูลแบบใด ?</span></h2>
+          <h2 class=""><i class="fas fa-angle-right"></i>&ensp;<span id="qt_text">แบบทดสอบสำหรับวัดผลความสามารถด้าน PHP</span></h2>
         </div>
         <div class="col-xl-2 mb-2">
-          <button class="btn btn-danger btn-block"><i class="fas fa-stopwatch"></i>&ensp;<span id="timer">0.10 วินาที</span></button>
+          <button class="btn btn-danger btn-block"><i class="fas fa-stopwatch"></i>&ensp;<span id="timer">Waiting</span></button>
         </div>
       </div>
       <div class="card" style="background-color:#efefef!important">
         <div class="card-body">
-          <div class="row">
+          <div class="row WaitQ">
+            <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
+              <button class="btn btn-block btn-success mb-2"  onclick="setQuestion()">
+                <div class="card-body">
+                  <h1 class="mt-2 mb-2"><i class="fas fa-angle-right"></i>&ensp;<span id='WaitQ'>Start</span></h1>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="row DoQ">
             <div class="col-xl-6 col-md-6 mb-4 mt-4">
               <button class="btn btn-block btn-success mb-2">
                 <div class="card-body">
@@ -106,17 +115,23 @@
 
   $().ready(function(){
 
-      console.log(data);
-
-      setQuestion(qt_id)
-
+      console.log(data);$(".DoQ").toggle();
+      $('[id*="cho_"]').click(function(){
+        console.log($(this).attr('id').substr(4));
+        if($(this).attr('id').substr(4) == data['questions'][qt_id-1]['answer_key']){
+          console.log(score++)
+        }
+        else{
+            console.log(score)
+        }
+      })
   })
 
-  function setQuestion(id){
+  function setQuestion(){
 
-      $('#qt_text').text(data['questions'][id]['text'])
+      $('#qt_text').text(data['questions'][qt_id]['text'])
 
-      setChoices(data['questions'][id]['choices'])
+      setChoices(data['questions'][qt_id]['choices'])
 
       nextTime = new Date().getTime() + (31 * 1000);
 
@@ -130,21 +145,22 @@
   }
 
   function startTimer(){
-      let timer = setInterval(function () {
-          timerSeconds = Math.ceil((nextTime - new Date().getTime()) / 1000)
-          $('#timer').text(formatTime())
-
-          if (timerSeconds <= 0) {
-              $('#timer').text('Time out!')
-              clearInterval(timer);
-              if(qt_id < max_qt)
-                  setQuestion(++qt_id);
-              else{
-                  $('#timer').text('End!')
-                  return
+      $(".WaitQ").toggle(1000,function(){
+        $(".DoQ").toggle(1000,function(){
+          ++qt_id
+          let timer = setInterval(function () {
+              timerSeconds = Math.ceil((nextTime - new Date().getTime()) / 1000)
+              $('#timer').text(formatTime())
+              if (timerSeconds <= 0) {
+                  $('#timer').text('Time out!')
+                  clearInterval(timer);
+                  $(".WaitQ").toggle(1000,function(){
+                    $(".DoQ").toggle(1000)
+                  })
               }
-          }
-      }, 1000);
+          }, 1000);
+        })
+      })
   }
 
   function formatTime(){
