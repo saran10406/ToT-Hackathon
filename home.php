@@ -26,9 +26,22 @@
               </div>
             </div>
             <div class="col-12 mt-2">
-              <div class="card" style="height:100%">
-
-                <div class="card-body">
+              <div class="card">
+                <div class="card-header">
+                  <i class="fas fa-user"></i> PROFILE
+                </div>
+                <div class="card-body text-center">
+                  <div class="row ">
+                    <div class="col-xl-4">
+                      <img src="img/iconfinder_3_avatar_2754579 (1).png" alt="..." class="img-thumbnail">
+                    </div>
+                    <div class="col-xl-8">
+                      <h5 class="mt-4"><i class="fas fa-id-card"></i> Name : Saran Keawnang</h5>
+                      <h5 class="mt-4"><i class="fas fa-user-tie"></i> Position : Computer Engineer</h5>
+                      <h5 class="mt-4"><i class="fas fa-align-justify"></i> Department : Engineer</h5>
+                      <h5 class="mt-4"><i class="fas fa-star"></i> Point : 10 Point</h5>
+                    </div>
+                  </div>
 
                 </div>
               </div>
