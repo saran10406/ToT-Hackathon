@@ -33,11 +33,11 @@
                 <div class="card-body text-center">
                   <div class="row ">
                     <div class="col-xl-8">
-                      <canvas id="myChart" width="400" height="400"></canvas>
+                      <canvas id="myChart" width="250" height="250"></canvas>
                       <script>
                       var ctx = document.getElementById("myChart").getContext('2d');
                       var myChart = new Chart(ctx, {
-                          type: 'bar',
+                          type: 'radar',
                           data: {
                               labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
                               datasets: [{
