@@ -3,7 +3,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-xl-10">
-          <h2 class=""><i class="fas fa-angle-right"></i>&ensp;<span id="qt_text">แบบทดสอบสำหรับวัดผลความสามารถด้าน PHP</span></h2>
+          <h2 class=""><i class="fas fa-angle-right"></i>&ensp;<span id="qt_text">เกมประลองปัญญาด้าน PHP</span></h2>
         </div>
         <div class="col-xl-2 mb-2">
           <button class="btn btn-danger btn-block"><i class="fas fa-stopwatch"></i>&ensp;<span id="timer">Waiting</span></button>
@@ -11,6 +11,17 @@
       </div>
       <div class="card" style="background-color:#efefef!important">
         <div class="card-body">
+          <div class="row EndQ">
+          <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
+            <h1 align="center"><img src="img/iconfinder_php_3069654.png" height="100px" width="100px"></h1><br>
+            <h3 align="center">คะแนนที่คุณได้ 1/2 <i class="fas fa-star"></i><i class="fas fa-star"></i> </h3><br><hr><br>
+              <a href="./?p=home" class="btn btn-block btn-success mb-1"  onclick="setQuestion()">
+                <div class="card-body">
+                  <h1 class="mt-1 mb-1"><i class="fas fa-angle-right"></i>&ensp;<span>End</span></h1>
+                </div>
+              </a>
+            </div>
+          </div>
           <div class="row WaitQ">
             <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
               <button class="btn btn-block btn-success mb-2"  onclick="setQuestion()">
@@ -22,28 +33,28 @@
           </div>
           <div class="row DoQ">
             <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-success mb-2">
+              <button class="btn btn-block btn-success mb-2 cho_0">
                 <div class="card-body">
                   <h1 class="mt-5 mb-5"><i class="fas fa-circle"></i>&ensp;<span id="cho_0">String</span></h1>
                 </div>
               </button>
             </div>
             <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-danger mb-2">
+              <button class="btn btn-block btn-danger mb-2 cho_1">
                 <div class="card-body">
                   <h1 class="mt-5 mb-5"><i class="fas fa-circle"></i>&ensp;<span id="cho_1">Integer</span></h1>
                 </div>
               </button>
             </div>
             <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-info mb-2">
+              <button class="btn btn-block btn-info mb-2 cho_2">
                 <div class="card-body">
                   <h1 class="mt-5 mb-5"><i class="fas fa-circle"></i>&ensp;<span id="cho_2">Boolean</span></h1>
                 </div>
               </button>
             </div>
             <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-secondary mb-2">
+              <button class="btn btn-block btn-secondary mb-2 cho_3">
                 <div class="card-body">
                   <h1 class="mt-5 mb-5"><i class="fas fa-circle"></i>&ensp;<span id="cho_3">Double</span></h1>
                 </div>
@@ -112,18 +123,17 @@
   var nextTime = 0
   var qt_id=0
   var max_qt = 1
+  var action = 0
 
   $().ready(function(){
 
-      console.log(data);$(".DoQ").toggle();
-      $('[id*="cho_"]').click(function(){
-        console.log($(this).attr('id').substr(4));
-        if($(this).attr('id').substr(4) == data['questions'][qt_id-1]['answer_key']){
+      console.log(data);$(".DoQ").hide();
+      $(".EndQ").hide();
+      $('[class*="cho_"]').click(function(){
+        if($(this).find('[id*="cho_"]').attr('id').substr(4) == data['questions'][qt_id-1]['answer_key']){
           console.log(score++)
         }
-        else{
-            console.log(score)
-        }
+        action = 1 ;
       })
   })
 
@@ -133,7 +143,7 @@
 
       setChoices(data['questions'][qt_id]['choices'])
 
-      nextTime = new Date().getTime() + (31 * 1000);
+      nextTime = new Date().getTime() + (16 * 1000);
 
       startTimer()
   }
@@ -145,22 +155,31 @@
   }
 
   function startTimer(){
-      $(".WaitQ").toggle(1000,function(){
-        $(".DoQ").toggle(1000,function(){
-          ++qt_id
-          let timer = setInterval(function () {
-              timerSeconds = Math.ceil((nextTime - new Date().getTime()) / 1000)
-              $('#timer').text(formatTime())
-              if (timerSeconds <= 0) {
-                  $('#timer').text('Time out!')
-                  clearInterval(timer);
-                  $(".WaitQ").toggle(1000,function(){
-                    $(".DoQ").toggle(1000)
+    $(".WaitQ").hide();
+    $(".DoQ").fadeOut(200,function(){
+      $(".DoQ").fadeIn(500,function(){
+        ++qt_id
+        let timer = setInterval(function () {
+            timerSeconds = Math.ceil((nextTime - new Date().getTime()) / 1000)
+            $('#timer').text(formatTime())
+            if (timerSeconds <= 0 || action) {
+                action = 0 ;
+                $('#timer').text('Time out!')
+                clearInterval(timer);
+                if(max_qt > qt_id-1){
+                  setQuestion()
+                }
+                else{
+                  $("#qt_text").text("เกมประลองปัญญาด้าน PHP")
+                  $(".DoQ").fadeOut(200,function(){
+                    $(".EndQ").fadeIn(500,function(){
+                    })
                   })
-              }
-          }, 1000);
-        })
+                }
+            }
+        }, 100);
       })
+    })
   }
 
   function formatTime(){

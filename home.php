@@ -169,35 +169,35 @@
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_my_sql_682683.png"> English</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3><img src="img/iconfinder_php_3069654.png"> PHP</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_html5_245995.png"> HTML5</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_badge-css-3_317756.png"> CSS</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_my_sql_682683.png"> MySQL</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
                 </div>
               </a>
             </div>
