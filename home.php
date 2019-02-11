@@ -64,8 +64,7 @@
                               scales: {
                                 ticks: {
                                     beginAtZero: true,
-                                    max: 10,
-                                    min: 0
+                                    max: 10
                                 }
                               }
                           }
