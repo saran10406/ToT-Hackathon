@@ -42,7 +42,7 @@
                               labels: ["English", "PHP", "HTML", "CSS", "SQL"],
                               datasets: [{
                                   label: 'Status of Result',
-                                  data: [8, 4, 7, 5, 2],
+                                  data: [8, 4, 7, 5, 3],
                                   backgroundColor: [
                                       'rgba(54, 162, 235, 0.2)',
                                       'rgba(255, 206, 86, 0.2)',
@@ -64,7 +64,9 @@
                               scales: {
                                   yAxes: [{
                                       ticks: {
-                                          beginAtZero:true
+                                          beginAtZero:true,
+                                          max: 10,
+                                          min: 0
                                       }
                                   }]
                               }
