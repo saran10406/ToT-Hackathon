@@ -7,7 +7,7 @@
 
       $User_id = mysqli_real_escape_string($Connect,$_POST['User_id']);
       $User_password = mysqli_real_escape_string($Connect,$_POST['User_password']);
-      $ObjResult = mysqli_query($Connect,"SELECT Em_Id,Em_Email FROM employee WHERE Em_Id='$User_id' AND Em_Password='$User_password'");
+      $ObjResult = mysqli_query($Connect,"SELECT Em_Id,Em_Email FROM Employee WHERE Em_Id='$User_id' AND Em_Password='$User_password'");
       $num = mysqli_num_rows($ObjResult);
       if($num <= 0){
         $response['status'] = 'error';
@@ -16,7 +16,7 @@
         $response['status'] = 'success';
         $response['message'] = 'Login Success';
       }
-    
+
   }else{
     $response['status'] = 'error';
     $response['message'] = 'Empty Action';
