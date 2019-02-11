@@ -1,0 +1,18 @@
+body,html {
+  font-family: 'Prompt', sans-serif;
+  height: 100%;
+  margin: 0;
+  background: url("../img/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #ffff;
+}
