@@ -4,7 +4,7 @@
   //$today_day = date('d-m-Y H:i:s');
   //$today_date = date("H:i:s") + ' ' + date('d-m-Y');
 
-  $ServerName = 'localhost:8080';
+  $ServerName = 'localhost';
   $ServerUsername = 'root';
   $ServerPassword = 'saran1230';
   $ServerDataBase = 'totskill';

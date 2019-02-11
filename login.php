@@ -1,3 +1,4 @@
+<script src="js/auth.js"></script>
 <div class="row justify-content-md-center">
   <div class="col-xl-7 col-md-7">
 
@@ -19,12 +20,12 @@
         <form class="mb-4 mr-2 ml-2">
           <div class="form-group">
             <h4 class="text-secondary"><i class="fas fa-id-card"></i> Employee ID</h4>
-            <input type="text" class="form-control" name="TextID" id="TextID" aria-describedby="emailHelp" placeholder="Enter Employee ID" required>
+            <input type="text" class="form-control" name="User_id" id="User_id" aria-describedby="emailHelp" placeholder="Enter Employee ID" required>
             <small id="emailHelp" class="form-text text-muted">We'll never share your Employee ID with anyone else.</small>
           </div>
           <div class="form-group">
             <h4 class="text-secondary"><i class="fas fa-key"></i> Password</h4>
-            <input type="password" class="form-control" name="TextPassword" id="TextPassword" placeholder="Enter Password" required>
+            <input type="password" class="form-control" name="User_password" id="User_password" placeholder="Enter Password" required>
           </div>
           <button id="Btn_Loading" style="display:none" class="btn btn-primary btn-lg btn-block mt-4" type="button" disabled>
             <span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span>
