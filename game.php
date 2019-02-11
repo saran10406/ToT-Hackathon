@@ -69,6 +69,10 @@
           "0":{
               "text": "1 + 1 = ?",
               "answer_key": "1",
+              "type" : {
+                "0": 'PHP',
+                "1": '1'
+              },
               "choices":{
                   "0": { "text": "1" },
                   "1": { "text": "2" },
@@ -79,6 +83,10 @@
           "1":{
               "text": "2 + 2 = ?",
               "answer_key": "1",
+              "type" : {
+                "0": 'PHP',
+                "1": '1'
+              },
               "choices":{
                   "0": { "text": "3" },
                   "1": { "text": "4" },
@@ -95,7 +103,7 @@
   var nextTime = 0
   var qt_id=0
   var max_qt = 1
-  
+
   $().ready(function(){
 
       console.log(data);
@@ -110,7 +118,7 @@
 
       setChoices(data['questions'][id]['choices'])
 
-      nextTime = new Date().getTime() + (11 * 1000);
+      nextTime = new Date().getTime() + (31 * 1000);
 
       startTimer()
   }
@@ -125,7 +133,7 @@
       let timer = setInterval(function () {
           timerSeconds = Math.ceil((nextTime - new Date().getTime()) / 1000)
           $('#timer').text(formatTime())
-          
+
           if (timerSeconds <= 0) {
               $('#timer').text('Time out!')
               clearInterval(timer);
@@ -135,9 +143,7 @@
                   $('#timer').text('End!')
                   return
               }
-              
           }
-
       }, 1000);
   }
 
@@ -149,7 +155,7 @@
 
   /*
   * sleep
-  * sleep the porcess 
+  * sleep the porcess
   * @input milliseconds
   * @output -
   * @author Tanaphon Kleaklom (TL)
