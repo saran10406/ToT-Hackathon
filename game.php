@@ -137,7 +137,7 @@
               }
           },
           {
-              "text": "It has been raining since nine o’clock in the morning; the field is wet. I think we should call….the match this evening.",
+              "text": '"It has been raining since nine o’clock in the morning; the field is wet. I think we should call….the match this evening."',
               "answer_key": "1",
               "choices":{
                   "0": { "text": "on" },
