@@ -87,12 +87,78 @@
   const data = {
       "questions":{
           "0":{
-              "text": "1 + 1 = ?",
+              "text": "We’re off to……John. We want to see the new film at the Indra.",
               "answer_key": "1",
-              "type" : {
-                "0": 'PHP',
-                "1": '1'
-              },
+              "choices":{
+                  "0": { "text": "pick over … come over" },
+                  "1": { "text": "pick up … come along" },
+                  "2": { "text": "pick on … come by" },
+                  "3": { "text": "pick out … come in" }
+              }
+          },
+          "1":{
+              "text": "My youngest sister could…..a faucet to get a drink, but she was never able to…..the water all over the floor. ",
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "turn on … clean up" },
+                  "1": { "text": "turn to … pick up" },
+                  "2": { "text": "turn out … put away" },
+                  "3": { "text": "turn off … sweep away" }
+              }
+          },
+          "2":{
+              "text": "In ordinary conversation I concentrate my gaze….both eyes of the person addressing me.",
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "in" },
+                  "1": { "text": "on" },
+                  "2": { "text": "at" },
+                  "3": { "text": "to" }
+              }
+          },
+          "3":{
+              "text": "There were many inconveniences that you have to put……… when you go camping. ",
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "off to" },
+                  "1": { "text": "away from" },
+                  "2": { "text": "cut from" },
+                  "3": { "text": "up with" }
+              }
+          },
+          "4":{
+              "text": "I think you’d better sort    …..the things you want to keep and the things you want to throw…..before we leave.",
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "out, away" },
+                  "1": { "text": "with, out" },
+                  "2": { "text": "away, out" },
+                  "3": { "text": "of, away" }
+              }
+          },
+          "5":{
+              "text": "It has been raining since nine o’clock in the morning; the field is wet. I think we should call….the match this evening.",
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "on" },
+                  "1": { "text": "at" },
+                  "2": { "text": "out" },
+                  "3": { "text": "off" }
+              }
+          },
+          "6":{
+              "text": '“what did they do during their long holidays together ?” Well, they concentrated …..rest, good eating, and relaxedconversation.”',
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "at" },
+                  "1": { "text": "in" },
+                  "2": { "text": "on" },
+                  "3": { "text": "to" }
+              }
+          },
+          "7":{
+              "text": '“May I……the lights ?” “Of course. But don’t forget to……the lights when you leave.”',
+              "answer_key": "1",
               "choices":{
                   "0": { "text": "1" },
                   "1": { "text": "2" },
@@ -100,18 +166,94 @@
                   "3": { "text": "4" }
               }
           },
-          "1":{
-              "text": "2 + 2 = ?",
+          "8":{
+              "text": "Why don’t you look…..that word in the dictionary if you don’t know its meaning ?",
               "answer_key": "1",
-              "type" : {
-                "0": 'PHP',
-                "1": '1'
-              },
               "choices":{
-                  "0": { "text": "3" },
-                  "1": { "text": "4" },
-                  "2": { "text": "5" },
-                  "3": { "text": "6" }
+                  "0": { "text": "at" },
+                  "1": { "text": "up" },
+                  "2": { "text": "out" },
+                  "3": { "text": "to" }
+              }
+          },
+          "9":{
+              "text": "The boy depends…..his sister to take care him",
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "to … with" },
+                  "1": { "text": "on … about" },
+                  "2": { "text": "on … of" },
+                  "3": { "text": "to … to" }
+              }
+          },
+          "10":{
+              "text": "Your son broke…..our house last night.” ?",
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "up" },
+                  "1": { "text": "down" },
+                  "2": { "text": "into" },
+                  "3": { "text": "cut" }
+              }
+          },
+          "11":{
+              "text": '“Again, he won’t get a promotion this year.” “Not if he keeps putting…..urgent matters.”',
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "down" },
+                  "1": { "text": "off" },
+                  "2": { "text": "away" },
+                  "3": { "text": "across" }
+              }
+          },
+          "12":{
+              "text": '"We’ll keep it…..two months’ have passed. “Then what ?”',
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "until" },
+                  "1": { "text": "during" },
+                  "2": { "text": "while" },
+                  "3": { "text": "before" }
+              }
+          },
+          "13":{
+              "text": "If a spark should reach the petrol, the whole place would go…. in flames.",
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "up" },
+                  "1": { "text": "on" },
+                  "2": { "text": "over" },
+                  "3": { "text": "off" }
+              }
+          },
+          "14":{
+              "text": '“you want me to go shopping with you ?” Yes, I want you to help me pick…..some shoes.',
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "out" },
+                  "1": { "text": "at" },
+                  "2": { "text": "in" },
+                  "3": { "text": "on" }
+              }
+          },
+          "15":{
+              "text": '“We haven’t seen Pomtip for ages.” “Oh, yesterday I ran……..her at Siam Square.” ',
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "into" },
+                  "1": { "text": "to" },
+                  "2": { "text": "for" },
+                  "3": { "text": "upon" }
+              }
+          },
+          "16":{
+              "text": "The fire which broke…..at Sam Yeak caused great damage.",
+              "answer_key": "1",
+              "choices":{
+                  "0": { "text": "out" },
+                  "1": { "text": "in" },
+                  "2": { "text": "off" },
+                  "3": { "text": "down" }
               }
           }
       }
@@ -126,7 +268,7 @@
   var action = 0
 
   $().ready(function(){
-
+    data['questions'] = shuffle(data['questions'])
       console.log(data);$(".DoQ").hide();
       $(".EndQ").hide();
       $('[class*="cho_"]').click(function(){
@@ -136,7 +278,24 @@
         action = 1 ;
       })
   })
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
 
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
   function setQuestion(){
 
       $('#qt_text').text(data['questions'][qt_id]['text'])
