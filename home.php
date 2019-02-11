@@ -62,19 +62,17 @@
                           },
                           options: {
                               scales: {
-                                  yAxes: [{
-                                      ticks: {
-                                          beginAtZero:true,
-                                          max: 10,
-                                          min: 0
-                                      }
-                                  }]
+                                ticks: {
+                                    beginAtZero: true,
+                                    max: 10,
+                                    min: 0
+                                }
                               }
                           }
                       });
                       </script>
                     </div>
-                    <div class="col-xl-4" style="margin-top:auto">
+                    <div class="col-xl-4" style="margin-top:auto;margin-bottom:auto">
                       <img src="img/iconfinder_3_avatar_2754579 (1).png" alt="..." class="img-thumbnail">
                     </div>
                   </div>
