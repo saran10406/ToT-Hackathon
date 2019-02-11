@@ -1,4 +1,8 @@
 <!doctype html>
+<?php
+  @session_start();
+
+ ?>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -42,15 +46,32 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="./?p=home"><i class="fas fa-home fa-2x"></i> HOME <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="./?p=about"><i class="fas fa-user-tie fa-2x"></i> ABOUT</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="./?p=login"><i class="fas fa-sign-in-alt fa-2x"></i> LOGIN</a>
-      </li>
+      <?php
+        if($_GET['p'] == null){
+          echo '<li class="nav-item active"><a class="nav-link" href="./?p=home"><i class="fas fa-home fa-2x"></i> HOME <span class="sr-only">(current)</span></a></li>';
+        }else if($_GET['p'] != 'login' && $_GET['p'] != 'about' && $_GET['p'] != 'game' && $_GET['p'] != 'true' && $_GET['p'] != 'false'){
+          echo '<li class="nav-item active"><a class="nav-link" href="./?p=home"><i class="fas fa-home fa-2x"></i> HOME <span class="sr-only">(current)</span></a></li>';
+        }else{
+          echo '<li class="nav-item"><a class="nav-link" href="./?p=home"><i class="fas fa-home fa-2x"></i> HOME <span class="sr-only">(current)</span></a></li>';
+        }
+        if($_GET['p'] == 'about'){
+          echo '<li class="nav-item active"><a class="nav-link" href="./?p=about"><i class="fas fa-user-tie fa-2x"></i> ABOUT</a></li>';
+        }else{
+          echo '<li class="nav-item "><a class="nav-link" href="./?p=about"><i class="fas fa-user-tie fa-2x"></i> ABOUT</a></li>';
+        }
+        if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
+          if($_GET['p'] == 'login'){
+            echo '<li class="nav-item active"><a class="nav-link" href="./?p=login"><i class="fas fa-sign-in-alt fa-2x"></i> LOGIN</a></li>';
+          }else{
+            echo '<li class="nav-item "><a class="nav-link" href="./?p=login"><i class="fas fa-sign-in-alt fa-2x"></i> LOGIN</a></li>';
+          }
+        }else{
+            
+        }
+
+      ?>
+
+
     </ul>
   </div>
       </div>
@@ -77,10 +98,6 @@
     </div>
 
 
-<<<<<<< HEAD
-    <!-- Optional JavaScript -->
 
-=======
->>>>>>> 8c98822f392ae618b01ba14b3fe9ae2af518fc33
   </body>
 </html>
