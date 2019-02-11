@@ -16,3 +16,21 @@ body,html {
   height: 60px;
   background-color: #ffff;
 }
+.big-font{
+  font-size: 2.5rem
+}
+.btn-pastel-1{
+  background-color: #e2b0ff;
+}
+.btn-pastel-2{
+  background-color: #fff2a7;
+}
+.btn-pastel-3{
+  background-color: #ffa9d0;
+}
+.btn-pastel-4{
+  background-color: #94b7e7;
+}
+.btn-pastel-1:hover, .btn-pastel-2:hover, .btn-pastel-3:hover, .btn-pastel-4:hover{
+  background-color: #ff8585;
+}

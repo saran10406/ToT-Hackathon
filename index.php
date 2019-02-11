@@ -40,6 +40,7 @@
     </nav>
     <div class="container mt-5 mb-5">
       <?php
+        error_reporting(~E_NOTICE);
         if($_GET['p'] == 'home'){
           include("home.php");
         }else if($_GET['p'] == 'login'){
