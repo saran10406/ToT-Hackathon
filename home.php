@@ -33,18 +33,17 @@
                 <div class="card-body text-center">
                   <div class="row ">
                     <div class="col-xl-8">
-                      <canvas id="myChart" width="400" height="400"></canvas>
+                      <canvas id="myChart" width="300" height="300" style='margin-left:auto;margin-right:auto'></canvas>
                       <script>
                       var ctx = document.getElementById("myChart").getContext('2d');
                       var myChart = new Chart(ctx, {
-                          type: 'bar',
+                          type: 'radar',
                           data: {
-                              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                              labels: ["English", "PHP", "HTML", "CSS", "SQL"],
                               datasets: [{
-                                  label: '# of Votes',
-                                  data: [12, 19, 3, 5, 2, 3],
+                                  label: 'Status of Result',
+                                  data: [8, 4, 7, 5, 3],
                                   backgroundColor: [
-                                      'rgba(255, 99, 132, 0.2)',
                                       'rgba(54, 162, 235, 0.2)',
                                       'rgba(255, 206, 86, 0.2)',
                                       'rgba(75, 192, 192, 0.2)',
@@ -52,7 +51,6 @@
                                       'rgba(255, 159, 64, 0.2)'
                                   ],
                                   borderColor: [
-                                      'rgba(255,99,132,1)',
                                       'rgba(54, 162, 235, 1)',
                                       'rgba(255, 206, 86, 1)',
                                       'rgba(75, 192, 192, 1)',
@@ -63,19 +61,23 @@
                               }]
                           },
                           options: {
-                              scales: {
-                                  yAxes: [{
-                                      ticks: {
-                                          beginAtZero:true
-                                      }
-                                  }]
+                          responsive: false,
+                          maintainAspectRatio: true,
+                          scale: {
+                              ticks: {
+                                  beginAtZero: true,
+                                  max: 10
                               }
+                            }
                           }
                       });
                       </script>
                     </div>
-                    <div class="col-xl-4">
-                      <img src="img/iconfinder_3_avatar_2754579 (1).png" alt="..." class="img-thumbnail">
+                    <div class="col-xl-4" style="margin-top:auto;margin-bottom:auto">
+                      <img src="https://image.flaticon.com/icons/svg/1332/1332044.svg" alt="..." class="img-thumbnail">
+                      <div>
+                        Type 1 Perfectionist
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -97,11 +99,11 @@
                         <th colspan="5">Score</th>
                       </tr>
                       <tr>
-                        <th>English</th>
-                        <th>PHP</th>
-                        <th>HTML</th>
-                        <th>css</th>
-                        <th>MySQL</th>
+                        <td>English</td>
+                        <td>PHP</td>
+                        <td>HTML</td>
+                        <td>CSS</td>
+                        <td>MySQL</td>
                       </tr>
                     </thead>
                     <tbody>
@@ -167,35 +169,35 @@
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_my_sql_682683.png"> English</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3><img src="img/iconfinder_php_3069654.png"> PHP</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_html5_245995.png"> HTML5</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_badge-css-3_317756.png"> CSS</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_my_sql_682683.png"> MySQL</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> 20 %</h3>
+                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
                 </div>
               </a>
             </div>
