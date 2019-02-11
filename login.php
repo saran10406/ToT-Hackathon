@@ -3,21 +3,34 @@
 
     <div class="card">
       <div class="card-body">
+        <div id="Login_Success" style="display:none">
+          <div class="alert alert-success" role="alert">
+            <h4 class="text-center"><i class="fas fa-check"></i> Login Success.</h4>
+          </div>
+        </div>
+        <div id="Login_Error" style="display:none">
+          <div class="alert alert-danger" role="alert">
+            <h4 class="text-center"><i class="fas fa-times"></i> Incorrect Employee ID or Password!</h4>
+          </div>
+        </div>
         <h1 class="text-center text-dark mb-4 mt-4" style="font-weight: bold;">Skill Challenger</h1>
         <img class="rounded mx-auto d-block" src="img/iconfinder_3_avatar_2754579.png">
 
         <form class="mb-4 mr-2 ml-2">
           <div class="form-group">
-            <h4 class="text-secondary" for="exampleInputEmail1"><i class="fas fa-id-card"></i> Employee ID</h4>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Employee ID">
+            <h4 class="text-secondary"><i class="fas fa-id-card"></i> Employee ID</h4>
+            <input type="text" class="form-control" name="TextID" id="TextID" aria-describedby="emailHelp" placeholder="Enter Employee ID" required>
             <small id="emailHelp" class="form-text text-muted">We'll never share your Employee ID with anyone else.</small>
           </div>
           <div class="form-group">
-            <h4 class="text-secondary" for="exampleInputPassword1"><i class="fas fa-key"></i> Password</h4>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <h4 class="text-secondary"><i class="fas fa-key"></i> Password</h4>
+            <input type="password" class="form-control" name="TextPassword" id="TextPassword" placeholder="Enter Password" required>
           </div>
-
-          <button type="submit" class="btn btn-primary btn-lg btn-block mt-4"><i class="fas fa-sign-in-alt"></i> Login</button>
+          <button id="Btn_Loading" style="display:none" class="btn btn-primary btn-lg btn-block mt-4" type="button" disabled>
+            <span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+          <button id="Btn_Login" type="submit" class="btn btn-primary btn-lg btn-block mt-4"><i class="fas fa-sign-in-alt"></i> Login</button>
         </form>
       </div>
     </div>
