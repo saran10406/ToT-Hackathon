@@ -9,7 +9,7 @@
                 <div class="card-header">
                   <i class="fas fa-user"></i> PROFILE
                 </div>
-                <div class="card-body">
+                <div class="card-body text-center">
                   <div class="row ">
                     <div class="col-xl-4">
                       <img src="img/iconfinder_3_avatar_2754579 (1).png" alt="..." class="img-thumbnail">

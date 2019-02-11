@@ -28,17 +28,17 @@
       <li class="nav-item active">
         <a class="nav-link" href="./?p=home"><i class="fas fa-home fa-2x"></i> HOME <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="./?p=about"><i class="fas fa-user-tie fa-2x"></i> ABOUT</a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="./?p=login"><i class="fas fa-sign-in-alt fa-2x"></i> LOGIN</a>
       </li>
     </ul>
   </div>
       </div>
     </nav>
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
       <?php
         if($_GET['p'] == 'home'){
           include("home.php");
