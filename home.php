@@ -61,12 +61,14 @@
                               }]
                           },
                           options: {
-                              scales: {
-                                ticks: {
-                                    beginAtZero: true,
-                                    max: 10
-                                }
+                          responsive: false,
+                          maintainAspectRatio: true,
+                          scale: {
+                              ticks: {
+                                  beginAtZero: true,
+                                  max: 5
                               }
+                            }
                           }
                       });
                       </script>
