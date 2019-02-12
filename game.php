@@ -15,7 +15,7 @@
           <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
             <h1 align="center"><img src="img/iconfinder_php_3069654.png" height="100px" width="100px"></h1><br>
             <h3 align="center">คะแนนที่คุณได้ 1/2 <i class="fas fa-star"></i><i class="fas fa-star"></i> </h3><br><hr><br>
-              <a href="./?p=home" class="btn btn-block btn-success mb-1"  onclick="setQuestion()">
+              <a href="./?p=home" class="btn btn-block btn-pastel-danger mb-1"  onclick="setQuestion()">
                 <div class="card-body">
                   <h1 class="mt-1 mb-1"><i class="fas fa-angle-right"></i>&ensp;<span>End</span></h1>
                 </div>
@@ -24,7 +24,7 @@
           </div>
           <div class="row WaitQ">
             <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
-              <button class="btn btn-block btn-success mb-2"  onclick="setQuestion()">
+              <button class="btn btn-block btn-pastel-success mb-2"  onclick="setQuestion()">
                 <div class="card-body">
                   <h1 class="mt-2 mb-2"><i class="fas fa-angle-right"></i>&ensp;<span id='WaitQ'>Start</span></h1>
                 </div>

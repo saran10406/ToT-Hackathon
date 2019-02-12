@@ -20,19 +20,39 @@ body,html {
   font-size: 2.5rem
 }
 .btn-pastel-1{
+  opacity: 1;
   background-color: #e2b0ff;
 }
 .btn-pastel-2{
+  opacity: 1;
   background-color: #fff2a7;
 }
 .btn-pastel-3{
+  opacity: 1;
   background-color: #ffa9d0;
 }
 .btn-pastel-4{
+  opacity: 1;
   background-color: #94b7e7;
 }
 .btn-pastel-1:hover, .btn-pastel-2:hover, .btn-pastel-3:hover, .btn-pastel-4:hover{
-  background-color: #ff8585;
+  opacity: 0.7;
+}
+.btn-pastel-success{
+  color: #fff;
+  background-color: #86b872;
+}
+.btn-pastel-success:hover{
+  color: #fff;
+  background-color: rgba(134,184,114,0.7);
+}
+.btn-pastel-danger{
+  color: #fff;
+  background-color: #e15a53;
+}
+.btn-pastel-danger:hover{
+  color: #fff;
+  background-color: rgba(225,90,83,0.7);
 }
 
 
