@@ -14,8 +14,8 @@
           <div class="row EndQ">
           <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
             <h1 align="center"><img src="img/iconfinder_php_3069654.png" height="100px" width="100px"></h1><br>
-            <h3 align="center">คะแนนที่คุณได้ 1/2 <i class="fas fa-star"></i><i class="fas fa-star"></i> </h3><br><hr><br>
-              <a href="./?p=home" class="btn btn-block btn-success mb-1"  onclick="setQuestion()">
+            <h3 align="center" class="Star">Your Score is <span id='score'></span>/<span id='maxscore'></span>  </h3><br><hr><br>
+              <a href="./?p=home" class="btn btn-block btn-success mb-1">
                 <div class="card-body">
                   <h1 class="mt-1 mb-1"><i class="fas fa-angle-right"></i>&ensp;<span>End</span></h1>
                 </div>
@@ -98,16 +98,15 @@
           },
           {
               "text": "My youngest sister could…..a faucet to get a drink, but she was never able to…..the water all over the floor. ",
-              "answer_key": "1",
+              "answer_key": "0",
               "choices":{
                   "0": { "text": "turn on … clean up" },
                   "1": { "text": "turn to … pick up" },
                   "2": { "text": "turn out … put away" },
                   "3": { "text": "turn off … sweep away" }
               }
-          },
+          },{
               "text": "In ordinary conversation I concentrate my gaze….both eyes of the person addressing me.",
-              {
               "answer_key": "1",
               "choices":{
                   "0": { "text": "in" },
@@ -118,7 +117,7 @@
           },
           {
               "text": "There were many inconveniences that you have to put……… when you go camping. ",
-              "answer_key": "1",
+              "answer_key": "3",
               "choices":{
                   "0": { "text": "off to" },
                   "1": { "text": "away from" },
@@ -128,7 +127,7 @@
           },
           {
               "text": "I think you’d better sort    …..the things you want to keep and the things you want to throw…..before we leave.",
-              "answer_key": "1",
+              "answer_key": "0",
               "choices":{
                   "0": { "text": "out, away" },
                   "1": { "text": "with, out" },
@@ -138,7 +137,7 @@
           },
           {
               "text": '"It has been raining since nine o’clock in the morning; the field is wet. I think we should call….the match this evening."',
-              "answer_key": "1",
+              "answer_key": "3",
               "choices":{
                   "0": { "text": "on" },
                   "1": { "text": "at" },
@@ -148,7 +147,7 @@
           },
           {
               "text": '“what did they do during their long holidays together ?” Well, they concentrated …..rest, good eating, and relaxedconversation.”',
-              "answer_key": "1",
+              "answer_key": "2",
               "choices":{
                   "0": { "text": "at" },
                   "1": { "text": "in" },
@@ -156,7 +155,16 @@
                   "3": { "text": "to" }
               }
           },
-
+          {
+              "text": '“May I……the lights ?” “Of course. But don’t forget to……the lights when you leave.”',
+              "answer_key": "2",
+              "choices":{
+                  "0": { "text": "turn on … turn down" },
+                  "1": { "text": "turn up … turn in" },
+                  "2": { "text": "turn on … turn out" },
+                  "3": { "text": "turn off … turn up" }
+              }
+          },
           {
               "text": '"Why don’t you look…..that word in the dictionary if you don’t know its meaning ?"',
               "answer_key": "1",
@@ -169,7 +177,7 @@
           },
           {
               "text": "The boy depends…..his sister to take care him",
-              "answer_key": "1",
+              "answer_key": "2",
               "choices":{
                   "0": { "text": "to … with" },
                   "1": { "text": "on … about" },
@@ -179,7 +187,7 @@
           },
           {
               "text": "Your son broke…..our house last night.” ?",
-              "answer_key": "1",
+              "answer_key": "2",
               "choices":{
                   "0": { "text": "up" },
                   "1": { "text": "down" },
@@ -199,7 +207,7 @@
           },
           {
               "text": '"We’ll keep it…..two months’ have passed. “Then what ?”',
-              "answer_key": "1",
+              "answer_key": "0",
               "choices":{
                   "0": { "text": "until" },
                   "1": { "text": "during" },
@@ -209,7 +217,7 @@
           },
           {
               "text": "If a spark should reach the petrol, the whole place would go…. in flames.",
-              "answer_key": "1",
+              "answer_key": "3",
               "choices":{
                   "0": { "text": "up" },
                   "1": { "text": "on" },
@@ -219,7 +227,7 @@
           },
           {
               "text": '“you want me to go shopping with you ?” Yes, I want you to help me pick…..some shoes.',
-              "answer_key": "1",
+              "answer_key": "0",
               "choices":{
                   "0": { "text": "out" },
                   "1": { "text": "at" },
@@ -229,7 +237,7 @@
           },
           {
               "text": '“We haven’t seen Pomtip for ages.” “Oh, yesterday I ran……..her at Siam Square.” ',
-              "answer_key": "1",
+              "answer_key": "0",
               "choices":{
                   "0": { "text": "into" },
                   "1": { "text": "to" },
@@ -251,11 +259,10 @@
   }
 
   var score = 0
-
   var timerSeconds = new Date().getTime()
   var nextTime = 0
   var qt_id=0
-  var max_qt = 1
+  var max_qt = 9;
   var action = 0
 
   $().ready(function(){
@@ -263,7 +270,7 @@
       console.log(data);$(".DoQ").hide();
       $(".EndQ").hide();
       $('[class*="cho_"]').click(function(){
-        if($(this).find('[id*="cho_"]').attr('id').substr(4) == data['questions'][qt_id-1]['answer_key']){
+        if(($(this).find('[id*="cho_"]').attr('id').substr(4) == data['questions'][qt_id-1]['answer_key'])&&!action){
           console.log(score++)
         }
         action = 1 ;
@@ -271,7 +278,7 @@
   })
   function setQuestion(){
 
-      $('#qt_text').text(data['questions'][qt_id]['text'])
+      $('#qt_text').text(data['questions'][qt_id]['text'] +" "+(parseInt(data['questions'][qt_id]['answer_key'])+1))
 
       setChoices(data['questions'][qt_id]['choices'])
 
@@ -303,6 +310,23 @@
                 }
                 else{
                   $("#qt_text").text("เกมประลองปัญญาด้าน PHP")
+                    $("#score").text(score)
+                      $("#maxscore").text(max_qt+1)
+                        if(score == 6 || score == 7){
+                          $(".Star").append('<br> got +2 <i class="fas fa-star"></i>')
+                        }
+                        else if(score == 8 || score == 9){
+                          $(".Star").append('<br> got +3 <i class="fas fa-star"></i>')
+                        }
+                        else if(score == 10){
+                          $(".Star").append('<br> got +5 <i class="fas fa-star"></i>')
+                        }
+                        else if(score <= 3){
+                          $(".Star").append('<br> got -1 <i class="fas fa-star"></i>')
+                        }
+                        else{
+                          $(".Star").append('<br> got 0 <i class="fas fa-star"></i>')
+                        }
                   $(".DoQ").fadeOut(200,function(){
                     $(".EndQ").fadeIn(500,function(){
                     })
