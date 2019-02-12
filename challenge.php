@@ -1,89 +1,97 @@
 <div class="container">
-  <div class="card">
-    <div class="card-body">
-      <div class="row">
-        <div class="col-xl-10">
-          <h2 class=""><i class="fas fa-angle-right"></i>&ensp;<span id="qt_text">เกมประลองปัญญาด้าน PHP</span></h2>
-        </div>
-        <div class="col-xl-2 mb-2">
-          <button class="btn btn-danger btn-block"><i class="fas fa-stopwatch"></i>&ensp;<span id="timer">Waiting</span></button>
-        </div>
-      </div>
-      <div class="card" style="background-color:#efefef!important">
+<div class="row">
+    <div class="card col-md-9">
         <div class="card-body">
-          <div class="row EndQ">
-          <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
-            <h1 align="center"><img src="img/iconfinder_php_3069654.png" height="100px" width="100px"></h1><br>
-            <h3 align="center" class="Star">Your Score is <span id='score'></span>/<span id='maxscore'></span>  </h3><br><hr><br>
-              <a href="./?p=home"  class="btn btn-block btn-pastel-danger mb-1" >
-                <div class="card-body">
-                  <h1 class="mt-1 mb-1"><i class="fas fa-angle-right"></i>&ensp;<span>End</span></h1>
-                </div>
-              </a>
+        <div class="row">
+            <div class="col-xl-10">
+            <h2 class=""><i class="fas fa-angle-right"></i>&ensp;<span id="qt_text">Tournament</span></h2>
             </div>
-          </div>
-          <div class="row WaitQ">
-            <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
-                <h3 class="text-center mb-3">วิธีในการเล่นเกม</h3>
-                <h4 class="text-center mb-5">
-                    <p>เลือกช้อยที่ถูกที่สุดภายในเวลาที่กำหนด</p>
-                    <p>ถ้าไม่แน่ใจในคำตอบ</p>
-                    <p>สามารถถามคำใบ้ผ่านแชทบอทได้</p>
-                </h4>
-              <button class="btn btn-block btn-pastel-success mb-2"  onclick="setQuestion()">
-                <div class="card-body">
-                  <h1 class="mt-2 mb-2"><span id='WaitQ'>Start</span></h1>
-                </div>
-              </button>
+            <div class="col-xl-2 mb-2">
+            <button class="btn btn-danger btn-block"><i class="fas fa-stopwatch"></i>&ensp;<span id="timer">Waiting</span></button>
             </div>
-          </div>
-          <div class="row DoQ">
-            <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-pastel-1 mb-2 cho_0">
-                <div class="card-body">
-                  <h1 class="mt-5 mb-5"><span id="cho_0">String</span></h1>
-                </div>
-              </button>
-            </div>
-            <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-pastel-2 mb-2 cho_1">
-                <div class="card-body">
-                  <h1 class="mt-5 mb-5"><span id="cho_1">Integer</span></h1>
-                </div>
-              </button>
-            </div>
-            <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-pastel-3 mb-2 cho_2">
-                <div class="card-body">
-                  <h1 class="mt-5 mb-5"><span id="cho_2">Boolean</span></h1>
-                </div>
-              </button>
-            </div>
-            <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-pastel-4 mb-2 cho_3">
-                <div class="card-body">
-                  <h1 class="mt-5 mb-5"><span id="cho_3">Double</span></h1>
-                </div>
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="card" style="background-color:#efefef!important">
+            <div class="card-body">
+            <div class="row EndQ">
+            <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
+                <h1 align="center"><img src="img/iconfinder_php_3069654.png" height="100px" width="100px"></h1><br>
+                <h3 align="center" class="Star">Your Score is <span id='score'></span>/<span id='maxscore'></span>  </h3><br><hr><br>
+                <a href="./?p=home"  class="btn btn-block btn-pastel-danger mb-1" >
+                    <div class="card-body">
+                    <h1 class="mt-1 mb-1"><i class="fas fa-angle-right"></i>&ensp;<span>End</span></h1>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <div class="row WaitQ">
+                <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
+                    <h3 class="text-center mb-3">วิธีในการเล่นเกม</h3>
+                    <h4 class="text-center mb-5">
+                        <p>เลือกช้อยที่ถูกที่สุดภายในเวลาที่กำหนด</p>
+                        <p>ถ้าไม่แน่ใจในคำตอบ</p>
+                        <p>สามารถถามคำใบ้ผ่านแชทบอทได้</p>
+                    </h4>
+                <button class="btn btn-block btn-pastel-success mb-2"  onclick="setQuestion()">
+                    <div class="card-body">
+                    <h1 class="mt-2 mb-2"><span id='WaitQ'>Start</span></h1>
+                    </div>
+                </button>
+                </div>
+            </div>
+            <div class="row DoQ">
+                <div class="col-xl-6 col-md-6 mb-4 mt-4">
+                <button class="btn btn-block btn-pastel-1 mb-2 cho_0">
+                    <div class="card-body">
+                    <h1 class="mt-5 mb-5"><span id="cho_0">String</span></h1>
+                    </div>
+                </button>
+                </div>
+                <div class="col-xl-6 col-md-6 mb-4 mt-4">
+                <button class="btn btn-block btn-pastel-2 mb-2 cho_1">
+                    <div class="card-body">
+                    <h1 class="mt-5 mb-5"><span id="cho_1">Integer</span></h1>
+                    </div>
+                </button>
+                </div>
+                <div class="col-xl-6 col-md-6 mb-4 mt-4">
+                <button class="btn btn-block btn-pastel-3 mb-2 cho_2">
+                    <div class="card-body">
+                    <h1 class="mt-5 mb-5"><span id="cho_2">Boolean</span></h1>
+                    </div>
+                </button>
+                </div>
+                <div class="col-xl-6 col-md-6 mb-4 mt-4">
+                <button class="btn btn-block btn-pastel-4 mb-2 cho_3">
+                    <div class="card-body">
+                    <h1 class="mt-5 mb-5"><span id="cho_3">Double</span></h1>
+                    </div>
+                </button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card col-md-3">
+     <div class="card-heading p-2"><h4>คู่แข่งของคุณ</h4></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="card col-md-12 mb-2">
+                    แผนกบัชญี
+                    <div class="text-right">8 คน</div>
+                </div>
+                <div class="card col-md-12 mb-2">
+                    แผนกช่างซ่อมบำรุง
+                    <div class="text-right">7 คน</div>
+                </div>
+                <div class="card col-md-12 mb-2">
+                    แผนกไอที
+                    <div class="text-right">10 คน</div>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
-</div>
-
-<button class="chat-btn col-md-3" id="chat_btn">
-    <p class="chat-welcome text-center col-md-12"><span class="text-left">ต้องการคำใบ้ คุยกับเราสิ</span>&ensp;<i class="fa fa-angle-up arrow text-right" aria-hidden="true"></i></p>
-</button>
-<div class="chat-box col-md-3">
-  <iframe
-    allow="microphone;"
-    width="100%"
-    height="100%"
-    class="dialog-flow-frame"
-    src="https://console.dialogflow.com/api-client/demo/embedded/b561eab2-8ef6-4162-8dde-96e547c87b7c">
-  </iframe>
 </div>
 
 <!-- jquery-->
