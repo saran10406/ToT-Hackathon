@@ -1,13 +1,13 @@
 $(document).ready(function(){
   $('form').on('submit', function (e) {
-
+ 
           e.preventDefault();
           document.getElementById('Btn_Loading').style.display = "block";
           document.getElementById('Btn_Login').style.display = "none";
           $.ajax({
             type: 'post',
             dataType  : 'json',
-            url: 'http://localhost:8080/ToT-Hackathon/system/auth.php',
+            url: 'http://totskill.tk/system/auth.php',
             data: $('form').serialize(),
             success: function (results) {
               if(results.status == 'success'){
