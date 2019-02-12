@@ -3,6 +3,7 @@
     echo "<meta http-equiv='refresh' content='0 ;url=./?p=home'>";
     exit();
   }
+  $_SESSION['Check'] = 1;
  ?>
 <script src="js/auth.js"></script>
 <div class="row justify-content-md-center">
