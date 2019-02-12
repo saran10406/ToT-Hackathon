@@ -1,3 +1,10 @@
+<?php
+ if($_SESSION["English"] <=6){
+  $_SESSION["English"] +=3;
+}
+    $_SESSION["Star_English"] +=2;
+
+?>
 <div class="container">
   <div class="card">
     <div class="card-body">
@@ -315,7 +322,7 @@
                   setQuestion()
                 }
                 else{
-                  $("#qt_text").text("เกมประลองปัญญาด้าน PHP")
+                  $("#qt_text").text("เกมประลองปัญญาด้าน English")
                     $("#score").text(score)
                       $("#maxscore").text(max_qt+1)
                         if(score == 6 || score == 7){

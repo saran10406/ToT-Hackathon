@@ -1,8 +1,8 @@
   <?php
-    if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
-      //echo "<meta http-equiv='refresh' content='0 ;url=./?p=login'>";
-      //exit();
-    }
+  if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
+    //echo "<meta http-equiv='refresh' content='0 ;url=./?p=login'>";
+    //exit();
+  }
     if(!isset($_SESSION["English"])){
       $_SESSION["English"] =0;
     }
@@ -184,7 +184,7 @@
               <div class="card-body text-primary">
                 <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                   <div class="card-body">
-                    <h3 class=""><img src="img/iconfinder_my_sql_682683.png"> English</h3>
+                    <h3 class=""><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1280px-Flag_of_the_United_Kingdom.svg.png" height="64px" width="64px" style="border-radius:50%"> English</h3>
                     <hr />
                     <h3 class="text-right"> <?php if(isset($_SESSION["Star_English"])){ echo $_SESSION["Star_English"];} else { echo 0; } ?> <i class="fas fa-star"></i> </h3>
                   </div>
