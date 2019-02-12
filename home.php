@@ -1,17 +1,17 @@
 <?php
   if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
-    echo "<meta http-equiv='refresh' content='0 ;url=./?p=login'>";
-    exit();
+    //echo "<meta http-equiv='refresh' content='0 ;url=./?p=login'>";
+    //exit();
   }
-  if(isset($_SESSION["English"]) && $_SESSION["English"]<=7){
-    $_SESSION["English"] +=2;
+  if(!isset($_SESSION["English"])){
+    $_SESSION["English"] =0;
   }
-  else {
-    $_SESSION["English"] =1;
-  }
-  
+
   if(!isset($_SESSION["Star_English"])){
     $_SESSION["Star_English"] = 0;
+  }
+  if(!isset($_SESSION["Check"])){
+    $_SESSION["Check"] = 1;
   }
  ?>
 <div class="container">
@@ -89,10 +89,18 @@
                       });
                       </script>
                     </div>
+                    <?php
+                    if($_SESSION["Check"]){
+                        echo '<div class="col-xl-4" style="margin-top:auto;margin-bottom:auto">                      <img src="https://static.thenounproject.com/png/55168-200.png" alt="..." class="img-thumbnail">                      <div>                        Unknown Type <br>(Click Here to Check)                      </div>                    </div>'
+                    }
+                    else{
+                      echo '<div class="col-xl-4" style="margin-top:auto;margin-bottom:auto">                      <img src="https://image.flaticon.com/icons/svg/1332/1332044.svg" alt="..." class="img-thumbnail">                      <div>                        Type 1 Perfectionist                      </div>                    </div>';
+                    }
+                    ?>
                     <div class="col-xl-4" style="margin-top:auto;margin-bottom:auto">
-                      <img src="https://image.flaticon.com/icons/svg/1332/1332044.svg" alt="..." class="img-thumbnail">
+                      <img src="https://static.thenounproject.com/png/55168-200.png" alt="..." class="img-thumbnail">
                       <div>
-                        Type 1 Perfectionist
+                        Unknown Type <br>(Click Here to Check)
                       </div>
                     </div>
                   </div>
