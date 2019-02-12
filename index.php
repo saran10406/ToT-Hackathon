@@ -94,6 +94,8 @@ error_reporting(~E_NOTICE);
           include("challenge.php");
         }else if($_GET['p'] == 'game'){
           include("game.php");
+        }else if($_GET['p'] == 'event'){
+          include("event.php");
         }else if($_GET['p'] == 'true'){
           include("true.php");
         }else if($_GET['p'] == 'false'){
