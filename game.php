@@ -33,28 +33,28 @@
           </div>
           <div class="row DoQ">
             <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-success mb-2 cho_0">
+              <button class="btn btn-block btn-pastel-1 mb-2 cho_0">
                 <div class="card-body">
                   <h1 class="mt-5 mb-5"><i class="fas fa-circle"></i>&ensp;<span id="cho_0">String</span></h1>
                 </div>
               </button>
             </div>
             <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-danger mb-2 cho_1">
+              <button class="btn btn-block btn-pastel-2 mb-2 cho_1">
                 <div class="card-body">
                   <h1 class="mt-5 mb-5"><i class="fas fa-circle"></i>&ensp;<span id="cho_1">Integer</span></h1>
                 </div>
               </button>
             </div>
             <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-info mb-2 cho_2">
+              <button class="btn btn-block btn-pastel-3 mb-2 cho_2">
                 <div class="card-body">
                   <h1 class="mt-5 mb-5"><i class="fas fa-circle"></i>&ensp;<span id="cho_2">Boolean</span></h1>
                 </div>
               </button>
             </div>
             <div class="col-xl-6 col-md-6 mb-4 mt-4">
-              <button class="btn btn-block btn-secondary mb-2 cho_3">
+              <button class="btn btn-block btn-pastel-4 mb-2 cho_3">
                 <div class="card-body">
                   <h1 class="mt-5 mb-5"><i class="fas fa-circle"></i>&ensp;<span id="cho_3">Double</span></h1>
                 </div>
