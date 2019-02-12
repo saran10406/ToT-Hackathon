@@ -3,6 +3,16 @@
     echo "<meta http-equiv='refresh' content='0 ;url=./?p=login'>";
     exit();
   }
+  if(isset($_SESSION["English"]) && $_SESSION["English"]<=7){
+    $_SESSION["English"] +=2;
+  }
+  else {
+    $_SESSION["English"] =1;
+  }
+  
+  if(!isset($_SESSION["Star_English"])){
+    $_SESSION["Star_English"] = 0;
+  }
  ?>
 <div class="container">
   <div class="card">
@@ -48,7 +58,7 @@
                               labels: ["English", "PHP", "HTML", "CSS", "SQL"],
                               datasets: [{
                                   label: 'Status of Result',
-                                  data: [8, 4, 7, 5, 3],
+                                  data: [<?php if(isset($_SESSION["English"])){ echo $_SESSION["English"];} else { echo 0; } ?>, 4, 7, 5, 3],
                                   backgroundColor: [
                                       'rgba(54, 162, 235, 0.2)',
                                       'rgba(255, 206, 86, 0.2)',
@@ -175,35 +185,35 @@
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_my_sql_682683.png"> English</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
+                  <h3 class="text-right"> <?php if(isset($_SESSION["Star_English"])){ echo $_SESSION["Star_English"];} else { echo 0; } ?> <i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3><img src="img/iconfinder_php_3069654.png"> PHP</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
+                  <h3 class="text-right"> 11 <i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_html5_245995.png"> HTML5</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
+                  <h3 class="text-right"> 16 <i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_badge-css-3_317756.png"> CSS</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
+                  <h3 class="text-right"> 8 <i class="fas fa-star"></i> </h3>
                 </div>
               </a>
               <a href="./?p=game" class="btn btn-block btn-outline-secondary mb-2" style="border-color:#dee4ea!important">
                 <div class="card-body">
                   <h3 class=""><img src="img/iconfinder_my_sql_682683.png"> MySQL</h3>
                   <hr />
-                  <h3 class="text-right"><i class="fas fa-star"></i> </h3>
+                  <h3 class="text-right"> 3 <i class="fas fa-star"></i> </h3>
                 </div>
               </a>
             </div>

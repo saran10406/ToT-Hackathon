@@ -1,3 +1,10 @@
+<?php
+if(!isset($_SESSION["Star_English"])){
+  $_SESSION["Star_English"] = 0;
+}
+else{
+  $_SESSION["Star_English"] += 3;
+} ?>
 <div class="container">
   <div class="card">
     <div class="card-body">
