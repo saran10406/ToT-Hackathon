@@ -1,15 +1,3 @@
-<?php
-if(!isset($_SESSION["Star_English"])){
-  $_SESSION["Star_English"] = 0;
-}
-else{
-  $_SESSION["Star_English"] += 3;
-}
-if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
-    echo "<meta http-equiv='refresh' content='0 ;url=./?p=login'>";
-    exit();
-  }
- ?>
 <div class="container">
   <div class="card">
     <div class="card-body">
@@ -36,6 +24,12 @@ if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
           </div>
           <div class="row WaitQ">
             <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
+                <h3 class="text-center mb-3">วิธีในการเล่นเกม</h3>
+                <h4 class="text-center mb-5">
+                    <p>เลือกช้อยที่ถูกที่สุดภายในเวลาที่กำหนด</p>
+                    <p>ถ้าไม่แน่ใจในคำตอบ</p>
+                    <p>สามารถถามคำใบ้ผ่านแชทบอทได้</p>
+                </h4>
               <button class="btn btn-block btn-pastel-success mb-2"  onclick="setQuestion()">
                 <div class="card-body">
                   <h1 class="mt-2 mb-2"><span id='WaitQ'>Start</span></h1>
