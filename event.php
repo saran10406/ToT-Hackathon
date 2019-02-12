@@ -5,10 +5,10 @@
   <div class="card">
     <div class="card-body">
       <div class="row">
-        <div class="col-xl-10">
+        <div class="col-xl-12">
           <h2 class=""><i class="fas fa-angle-right"></i>&ensp;<span id="qt_text">Enneagram Quiz</span></h2>
         </div>
-        <div class="col-xl-2 mb-2">
+        <div class="col-xl-2 mb-2" hidden>
           <button class="btn btn-danger btn-block"><i class="fas fa-stopwatch"></i>&ensp;<span id="timer">Waiting</span></button>
         </div>
       </div>
@@ -18,7 +18,7 @@
           <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
             <h1 align="center"><img src="https://image.flaticon.com/icons/svg/1332/1332044.svg" height="100px" width="100px"></h1><br>
             <h3 align="center">Enneagram ของคุณคือ<br>คนสมบูรณ์แบบ (THE PERFECTIONIST)</h3><br>
-            <h4 align="center">บุคลิกคนประเภทนี้ จะเป็นนักปฏิรูป นักต่อสู้เพื่ออุดมคติ ชอบวิพากษ์วิจารณ์ตนเองและผู้อื่น ซื่อสัตย์ มีระเบียบวินัยเคร่งครัด 
+            <h4 align="center">บุคลิกคนประเภทนี้ จะเป็นนักปฏิรูป นักต่อสู้เพื่ออุดมคติ ชอบวิพากษ์วิจารณ์ตนเองและผู้อื่น ซื่อสัตย์ มีระเบียบวินัยเคร่งครัด
 </h4><br>
             <hr><br>
               <a href="./?p=home"  class="btn btn-block btn-pastel-danger mb-1" >
@@ -150,66 +150,91 @@
       ]
   }
 
-  var score = 0
-  var timerSeconds = new Date().getTime()
-  var nextTime = 0
-  var qt_id=0
-  var max_qt = 3;
-  var action = 0
+    var score = 0
+    var timerSeconds = new Date().getTime()
+    var nextTime = 0
+    var qt_id=0
+    var max_qt = 3;
+    var action = 0
 
-  $().ready(function(){
-     data.questions.sort(function(a, b){return 0.5 - Math.random()});
-      console.log(data);$(".DoQ").hide();
-      $(".EndQ").hide();
-      $('[class*="cho_"]').click(function(){
-        if(($(this).find('[id*="cho_"]').attr('id').substr(4) == data['questions'][qt_id-1]['answer_key'])&&!action){
-          console.log(score++)
-        }
-        action = 1 ;
-        ++qt_id
-      })
-  })
-  function setQuestion(){
-
-      $('#qt_text').text(data['questions'][qt_id]['text'])
-
-      setChoices(data['questions'][qt_id]['choices'])
-
-      nextTime = new Date().getTime() + (16 * 1000);
-
-      startTimer()
-  }
-
-  function setChoices(arr_cho){
-      for(var i = 0; i < 4; i++){
-          $('#cho_'+i).text(arr_cho[i]['text'])
-      }
-  }
-
-  function startTimer(){
-    $(".WaitQ").hide();
-    $(".DoQ").fadeOut(200,function(){
-      $(".DoQ").fadeIn(500,function(){
-        if(max_qt > qt_id-1){
-            setQuestion()
-        }
-        else{
-            $("#qt_text").text("Enneagram Quiz")
-            $(".DoQ").fadeOut(200,function(){
-            $(".EndQ").fadeIn(500,function(){
-            })
-            })
-        }
-        
-      })
+    $().ready(function(){
+       data.questions.sort(function(a, b){return 0.5 - Math.random()});
+        console.log(data);$(".DoQ").hide();
+        $(".EndQ").hide();
+        $('[class*="cho_"]').click(function(){
+          if(($(this).find('[id*="cho_"]').attr('id').substr(4) == data['questions'][qt_id-1]['answer_key'])&&!action){
+            console.log(score++)
+          }
+          action = 1 ;
+        })
     })
-  }
+    function setQuestion(){
 
-  function formatTime(){
-      var minutes = Math.floor(timerSeconds / 60);
-      var seconds = Math.ceil(timerSeconds % 60);
-      return minutes + ':' + (seconds < 10 ? '0' : '') + seconds
-  }
+        $('#qt_text').text(data['questions'][qt_id]['text'])
+
+        setChoices(data['questions'][qt_id]['choices'])
+
+        nextTime = new Date().getTime() + (16 * 1000);
+
+        startTimer()
+    }
+
+    function setChoices(arr_cho){
+        for(var i = 0; i < 4; i++){
+            $('#cho_'+i).text(arr_cho[i]['text'])
+        }
+    }
+
+    function startTimer(){
+      $(".WaitQ").hide();
+      $(".DoQ").fadeOut(200,function(){
+        $(".DoQ").fadeIn(500,function(){
+          ++qt_id
+          let timer = setInterval(function () {
+              timerSeconds = 555;
+              $('#timer').text(formatTime())
+              if (timerSeconds <= 0 || action) {
+                  action = 0 ;
+                  $('#timer').text('Time out!')
+                  clearInterval(timer);
+                  if(max_qt > qt_id-1){
+                    setQuestion()
+                  }
+                  else{
+                    $("#qt_text").text("เกมประลองปัญญาด้าน English")
+                      $("#score").text(score)
+                        $("#maxscore").text(max_qt+1)
+                          if(score == 6 || score == 7){
+                            $(".Star").append('<br> got +2 <i class="fas fa-star"></i>')
+                          }
+                          else if(score == 8 || score == 9){
+                            $(".Star").append('<br> got +3 <i class="fas fa-star"></i>')
+                          }
+                          else if(score == 10){
+                            $(".Star").append('<br> got +5 <i class="fas fa-star"></i>')
+                          }
+                          else if(score <= 3){
+                            $(".Star").append('<br> got -1 <i class="fas fa-star"></i>')
+                          }
+                          else{
+                            $(".Star").append('<br> got 0 <i class="fas fa-star"></i>')
+                          }
+                    $(".DoQ").fadeOut(200,function(){
+                      $(".EndQ").fadeIn(500,function(){
+                      })
+                    })
+                  }
+              }
+          }, 100);
+        })
+      })
+    }
+
+    function formatTime(){
+        var minutes = Math.floor(timerSeconds / 60);
+        var seconds = Math.ceil(timerSeconds % 60);
+        return minutes + ':' + (seconds < 10 ? '0' : '') + seconds
+    }
 
   /*
   * sleep
