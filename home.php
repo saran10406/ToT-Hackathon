@@ -6,7 +6,6 @@
     if(!isset($_SESSION["English"])){
       $_SESSION["English"] =0;
     }
-
     if(!isset($_SESSION["Star_English"])){
       $_SESSION["Star_English"] = 0;
     }
@@ -91,18 +90,12 @@
                       </div>
                       <?php
                       if($_SESSION["Check"]){
-                          echo '<div class="col-xl-4" style="margin-top:auto;margin-bottom:auto">                      <img src="https://static.thenounproject.com/png/55168-200.png" alt="..." class="img-thumbnail">                      <div>                        Unknown Type <br>(Click Here to Check)                      </div>                    </div>'
+                          echo '<div class="col-xl-4" style="margin-top:auto;margin-bottom:auto">                        <img src="https://static.thenounproject.com/png/55168-200.png" alt="..." class="img-thumbnail">                        <div>                          <a href="./?p=event">                          Unknown Type <br>(Click Here to Check)                        </a>                        </div>                      </div>';
                       }
                       else{
                         echo '<div class="col-xl-4" style="margin-top:auto;margin-bottom:auto">                      <img src="https://image.flaticon.com/icons/svg/1332/1332044.svg" alt="..." class="img-thumbnail">                      <div>                        Type 1 Perfectionist                      </div>                    </div>';
                       }
                       ?>
-                      <div class="col-xl-4" style="margin-top:auto;margin-bottom:auto">
-                        <img src="https://static.thenounproject.com/png/55168-200.png" alt="..." class="img-thumbnail">
-                        <div>
-                          Unknown Type <br>(Click Here to Check)
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -133,47 +126,47 @@
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>Jiranuwat</td>
-                          <td>Jaiyen</td>
+                          <td>Saran </td>
+                          <td>Keawnang</td>
                           <td> 1 </td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                          <td> <?php if(isset($_SESSION["Star_English"])){ echo $_SESSION["Star_English"];} else { echo 0; } ?> <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 11 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 16 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 8 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 3 <i class="fas fa-star" style="font-size:8px"></i></td>
                         </tr>
                         <tr>
                           <td>2</td>
                           <td>Supapron </td>
                           <td>Wiroonphan</td>
-                          <td> 1 </td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                          <td> 4 </td>
+                          <td> 8 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 15 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 27 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 6 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 17 <i class="fas fa-star" style="font-size:8px"></i></td>
                         </tr>
                         <tr>
                           <td>3</td>
-                          <td>Saran </td>
-                          <td>Keawnang</td>
-                          <td> 1 </td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                          <td>Jiranuwat</td>
+                          <td>Jaiyen</td>
+                          <td> 7 </td>
+                          <td> 5 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 18 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 3 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 4 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 6 <i class="fas fa-star" style="font-size:8px"></i></td>
                         </tr>
                         <tr>
                           <td>4</td>
                           <td>Tanaphon </td>
                           <td>Kleaklom</td>
-                          <td> 1 </td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i><i class="fas fa-star" style="font-size:12px"></i></td>
-                          <td><i class="fas fa-star" style="font-size:12px"></i></td>
+                          <td> 3 </td>
+                          <td> 19 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 4 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 6 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 8 <i class="fas fa-star" style="font-size:8px"></i></td>
+                          <td> 9 <i class="fas fa-star" style="font-size:8px"></i></td>
                         </tr>
 
                       </tbody>
