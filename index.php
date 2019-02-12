@@ -75,7 +75,8 @@ error_reporting(~E_NOTICE);
         if(isset($_SESSION['user_id']) || isset($_SESSION['user_email'])){
           ?>
           <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item active"><a class="nav-link" href="./?p=about"><i class="fas fa-id-badge"></i> ID : <?php echo $_SESSION['user_id'];?></a></li>
+            <li class="nav-item active"><a class="nav-link" href="#"><i class="fas fa-id-badge"></i> ID : <?php echo $_SESSION['user_id'];?></a></li>
+            <li class="nav-item"><a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
           </ul>
           <?php
         }
