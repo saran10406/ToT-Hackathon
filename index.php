@@ -1,5 +1,6 @@
 <!doctype html>
 <?php
+error_reporting(~E_NOTICE);
   @session_start();
 
  ?>
@@ -48,31 +49,37 @@
     <ul class="navbar-nav ml-auto">
       <?php
         if($_GET['p'] == null){
-          echo '<li class="nav-item active"><a class="nav-link" href="./?p=home"><i class="fas fa-home fa-2x"></i> HOME <span class="sr-only">(current)</span></a></li>';
+          echo '<li class="nav-item active"><a class="nav-link" href="./?p=home"><i class="fas fa-home"></i> HOME <span class="sr-only">(current)</span></a></li>';
         }else if($_GET['p'] != 'login' && $_GET['p'] != 'about' && $_GET['p'] != 'game' && $_GET['p'] != 'true' && $_GET['p'] != 'false'){
-          echo '<li class="nav-item active"><a class="nav-link" href="./?p=home"><i class="fas fa-home fa-2x"></i> HOME <span class="sr-only">(current)</span></a></li>';
+          echo '<li class="nav-item active"><a class="nav-link" href="./?p=home"><i class="fas fa-home"></i> HOME <span class="sr-only">(current)</span></a></li>';
         }else{
-          echo '<li class="nav-item"><a class="nav-link" href="./?p=home"><i class="fas fa-home fa-2x"></i> HOME <span class="sr-only">(current)</span></a></li>';
+          echo '<li class="nav-item"><a class="nav-link" href="./?p=home"><i class="fas fa-home"></i> HOME <span class="sr-only">(current)</span></a></li>';
         }
         if($_GET['p'] == 'about'){
-          echo '<li class="nav-item active"><a class="nav-link" href="./?p=about"><i class="fas fa-user-tie fa-2x"></i> ABOUT</a></li>';
+          echo '<li class="nav-item active"><a class="nav-link" href="./?p=about"><i class="fas fa-user-tie"></i> ABOUT</a></li>';
         }else{
-          echo '<li class="nav-item "><a class="nav-link" href="./?p=about"><i class="fas fa-user-tie fa-2x"></i> ABOUT</a></li>';
+          echo '<li class="nav-item "><a class="nav-link" href="./?p=about"><i class="fas fa-user-tie"></i> ABOUT</a></li>';
         }
         if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
           if($_GET['p'] == 'login'){
-            echo '<li class="nav-item active"><a class="nav-link" href="./?p=login"><i class="fas fa-sign-in-alt fa-2x"></i> LOGIN</a></li>';
+            echo '<li class="nav-item active"><a class="nav-link" href="./?p=login"><i class="fas fa-sign-in-alt"></i> LOGIN</a></li>';
           }else{
-            echo '<li class="nav-item "><a class="nav-link" href="./?p=login"><i class="fas fa-sign-in-alt fa-2x"></i> LOGIN</a></li>';
+            echo '<li class="nav-item "><a class="nav-link" href="./?p=login"><i class="fas fa-sign-in-alt"></i> LOGIN</a></li>';
           }
-        }else{
-            
         }
-
       ?>
 
 
     </ul>
+    <?php
+        if(isset($_SESSION['user_id']) || isset($_SESSION['user_email'])){
+          ?>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item active"><a class="nav-link" href="./?p=about"><i class="fas fa-id-badge"></i> ID : <?php echo $_SESSION['user_id'];?></a></li>
+          </ul>
+          <?php
+        }
+     ?>
   </div>
       </div>
     </nav>

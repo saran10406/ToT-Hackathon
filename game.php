@@ -15,7 +15,7 @@
           <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
             <h1 align="center"><img src="img/iconfinder_php_3069654.png" height="100px" width="100px"></h1><br>
             <h3 align="center" class="Star">Your Score is <span id='score'></span>/<span id='maxscore'></span>  </h3><br><hr><br>
-              <a href="./?p=home" class="btn btn-block btn-success mb-1">
+              <a href="./?p=home"  class="btn btn-block btn-pastel-danger mb-1" >
                 <div class="card-body">
                   <h1 class="mt-1 mb-1"><i class="fas fa-angle-right"></i>&ensp;<span>End</span></h1>
                 </div>

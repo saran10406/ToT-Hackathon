@@ -16,6 +16,7 @@ $(document).ready(function(){
                   document.getElementById('Login_Error').style.display = "none";
                   document.getElementById('Btn_Loading').style.display = "none";
                   document.getElementById('Btn_Login').style.display = "block";
+                  window.location.assign("./?p=home");
                 },2000);
               }else{
                 setTimeout(function() {
