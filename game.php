@@ -3,7 +3,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-xl-10">
-          <h2 class=""><i class="fas fa-angle-right"></i>&ensp;<span id="qt_text">เกมประลองปัญญาด้าน PHP</span></h2>
+          <h2 class=""><i class="fas fa-angle-right"></i>&ensp;<span id="qt_text">เกมประลองปัญญาด้าน English</span></h2>
         </div>
         <div class="col-xl-2 mb-2">
           <button class="btn btn-danger btn-block"><i class="fas fa-stopwatch"></i>&ensp;<span id="timer">Waiting</span></button>
