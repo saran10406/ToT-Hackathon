@@ -1,3 +1,9 @@
+<?php
+  if(isset($_SESSION['user_id']) || isset($_SESSION['user_email'])){
+    echo "<meta http-equiv='refresh' content='0 ;url=./?p=home'>";
+    exit();
+  }
+ ?>
 <script src="js/auth.js"></script>
 <div class="row justify-content-md-center">
   <div class="col-xl-7 col-md-7">
