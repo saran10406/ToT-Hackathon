@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
+  echo "<meta http-equiv='refresh' content='0 ;url=./?p=login'>";
+  exit();
+}
   $_SESSION["Check"] = 0;
 ?>
 <div class="container">
