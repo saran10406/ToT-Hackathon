@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('form').on('submit', function (e) {
- 
+
           e.preventDefault();
           document.getElementById('Btn_Loading').style.display = "block";
           document.getElementById('Btn_Login').style.display = "none";
