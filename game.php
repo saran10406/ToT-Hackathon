@@ -1,3 +1,10 @@
+<?php
+ if($_SESSION["English"] <=6){
+  $_SESSION["English"] +=3;
+}
+    $_SESSION["Star_English"] +=2;
+
+?>
 <div class="container">
   <div class="card">
     <div class="card-body">
