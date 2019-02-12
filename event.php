@@ -16,8 +16,11 @@
         <div class="card-body">
           <div class="row EndQ">
           <div class="col-xl-6 col-md-6 mb-4 mt-4" style="margin-right:auto;margin-left:auto">
-            <h1 align="center"><img src="img/iconfinder_php_3069654.png" height="100px" width="100px"></h1><br>
-            <h3 align="center" class="Star">Your Score is <span id='score'></span>/<span id='maxscore'></span>  </h3><br><hr><br>
+            <h1 align="center"><img src="https://image.flaticon.com/icons/svg/1332/1332044.svg" height="100px" width="100px"></h1><br>
+            <h3 align="center">Enneagram ของคุณคือ<br>คนสมบูรณ์แบบ (THE PERFECTIONIST)</h3><br>
+            <h4 align="center">บุคลิกคนประเภทนี้ จะเป็นนักปฏิรูป นักต่อสู้เพื่ออุดมคติ ชอบวิพากษ์วิจารณ์ตนเองและผู้อื่น ซื่อสัตย์ มีระเบียบวินัยเคร่งครัด 
+</h4><br>
+            <hr><br>
               <a href="./?p=home"  class="btn btn-block btn-pastel-danger mb-1" >
                 <div class="card-body">
                   <h1 class="mt-1 mb-1"><i class="fas fa-angle-right"></i>&ensp;<span>End</span></h1>
@@ -41,31 +44,31 @@
             </div>
           </div>
           <div class="row DoQ">
-            <div class="col-xl-12 col-md-12 mb-4 mt-4">
+            <div class="col-xl-12 col-md-12 mb-1 mt-1">
               <button class="btn btn-block btn-pastel-1 mb-2 cho_0">
                 <div class="card-body">
-                  <h1 class="mt-5 mb-5"><span id="cho_0">String</span></h1>
+                  <h3 class="mt-1 mb-1"><span id="cho_0">String</span></h3>
                 </div>
               </button>
             </div>
-            <div class="col-xl-12 col-md-12 mb-4 mt-4">
+            <div class="col-xl-12 col-md-12 mb-1 mt-1">
               <button class="btn btn-block btn-pastel-2 mb-2 cho_1">
                 <div class="card-body">
-                  <h1 class="mt-5 mb-5"><span id="cho_1">Integer</span></h1>
+                  <h3 class="mt-1 mb-1"><span id="cho_1">Integer</span></h3>
                 </div>
               </button>
             </div>
-            <div class="col-xl-12 col-md-12 mb-4 mt-4">
+            <div class="col-xl-12 col-md-12 mb-1 mt-1">
               <button class="btn btn-block btn-pastel-3 mb-2 cho_2">
                 <div class="card-body">
-                  <h1 class="mt-5 mb-5"><span id="cho_2">Boolean</span></h1>
+                  <h3 class="mt-1 mb-1"><span id="cho_2">Boolean</span></h3>
                 </div>
               </button>
             </div>
-            <div class="col-xl-12 col-md-12 mb-4 mt-4">
+            <div class="col-xl-12 col-md-12 mb-1 mt-1">
               <button class="btn btn-block btn-pastel-4 mb-2 cho_3">
                 <div class="card-body">
-                  <h1 class="mt-5 mb-5"><span id="cho_3">Double</span></h1>
+                  <h3 class="mt-1 mb-1"><span id="cho_3">Double</span></h3>
                 </div>
               </button>
             </div>
@@ -115,153 +118,33 @@
                   "3": { "text": "การมองเห็นสิ่งต่างๆอย่างถูกต้อง ชัดเจน และเป็นไปตามความเป็นจริง" }
               }
           },{
-              "text": "In ordinary conversation I concentrate my gaze….both eyes of the person addressing me.",
+              "text": "หากเหตุการณ์เหล่านี้เกิดขึ้นกับคุณ คุณคิดว่าข้อใดเลวร้ายที่สุด",
               "answer_key": "1",
               "choices":{
-                  "0": { "text": "in" },
-                  "1": { "text": "on" },
-                  "2": { "text": "at" },
-                  "3": { "text": "to" }
+                  "0": { "text": "การที่ศีลธรรมตกต่ำลง และการที่ต้องเผชิญกับความผิดพลาด" },
+                  "1": { "text": "การที่คุณต้องอยู่ร่วมกับคนที่ไม่เคยรักคุณ ไม่เคยเห็นค่าคุณเลย" },
+                  "2": { "text": "การที่คุณทำบางสิ่งบางอย่างผิดพลาดไป และมีคนรู้เข้า" },
+                  "3": { "text": "การที่คนอื่นคิดว่าคุณมีความผิดปกติทางอารมณ์" }
               }
           },
           {
-              "text": "There were many inconveniences that you have to put……… when you go camping. ",
+              "text": "ข้อใดตรงกับนิสัยของคุณมากที่สุด",
               "answer_key": "3",
               "choices":{
-                  "0": { "text": "off to" },
-                  "1": { "text": "away from" },
-                  "2": { "text": "cut from" },
-                  "3": { "text": "up with" }
+                  "0": { "text": "มนุษยสัมพันธ์ดี สบายๆ เรียบง่าย ใจเย็น" },
+                  "1": { "text": "มั่นใจในตัวเองสูง รักการแข่งขัน ทะเยอทะยาน" },
+                  "2": { "text": "ช่างคิด เปี่ยมไปด้วยความคิดสร้างสรรค์ มีอารมณ์อ่อนไหว" },
+                  "3": { "text": "อบอุ่น ชอบที่จะมอบความรักให้กับผู้อื่น ใจกว้าง" }
               }
           },
           {
-              "text": "I think you’d better sort    …..the things you want to keep and the things you want to throw…..before we leave.",
-              "answer_key": "0",
-              "choices":{
-                  "0": { "text": "out, away" },
-                  "1": { "text": "with, out" },
-                  "2": { "text": "away, out" },
-                  "3": { "text": "of, away" }
-              }
-          },
-          {
-              "text": '"It has been raining since nine o’clock in the morning; the field is wet. I think we should call….the match this evening."',
+              "text": "คุณจะพอใจ และมีความสุข เมื่อคุณ...",
               "answer_key": "3",
               "choices":{
-                  "0": { "text": "on" },
-                  "1": { "text": "at" },
-                  "2": { "text": "out" },
-                  "3": { "text": "off" }
-              }
-          },
-          {
-              "text": '“what did they do during their long holidays together ?” Well, they concentrated …..rest, good eating, and relaxedconversation.”',
-              "answer_key": "2",
-              "choices":{
-                  "0": { "text": "at" },
-                  "1": { "text": "in" },
-                  "2": { "text": "on" },
-                  "3": { "text": "to" }
-              }
-          },
-          {
-              "text": '“May I……the lights ?” “Of course. But don’t forget to……the lights when you leave.”',
-              "answer_key": "2",
-              "choices":{
-                  "0": { "text": "turn on … turn down" },
-                  "1": { "text": "turn up … turn in" },
-                  "2": { "text": "turn on … turn out" },
-                  "3": { "text": "turn off … turn up" }
-              }
-          },
-          {
-              "text": '"Why don’t you look…..that word in the dictionary if you don’t know its meaning ?"',
-              "answer_key": "1",
-              "choices":{
-                  "0": { "text": "at" },
-                  "1": { "text": "up" },
-                  "2": { "text": "out" },
-                  "3": { "text": "to" }
-              }
-          },
-          {
-              "text": "The boy depends…..his sister to take care him",
-              "answer_key": "2",
-              "choices":{
-                  "0": { "text": "to … with" },
-                  "1": { "text": "on … about" },
-                  "2": { "text": "on … of" },
-                  "3": { "text": "to … to" }
-              }
-          },
-          {
-              "text": "Your son broke…..our house last night.” ?",
-              "answer_key": "2",
-              "choices":{
-                  "0": { "text": "up" },
-                  "1": { "text": "down" },
-                  "2": { "text": "into" },
-                  "3": { "text": "cut" }
-              }
-          },
-          {
-              "text": '“Again, he won’t get a promotion this year.” “Not if he keeps putting…..urgent matters.”',
-              "answer_key": "1",
-              "choices":{
-                  "0": { "text": "down" },
-                  "1": { "text": "off" },
-                  "2": { "text": "away" },
-                  "3": { "text": "across" }
-              }
-          },
-          {
-              "text": '"We’ll keep it…..two months’ have passed. “Then what ?”',
-              "answer_key": "0",
-              "choices":{
-                  "0": { "text": "until" },
-                  "1": { "text": "during" },
-                  "2": { "text": "while" },
-                  "3": { "text": "before" }
-              }
-          },
-          {
-              "text": "If a spark should reach the petrol, the whole place would go…. in flames.",
-              "answer_key": "3",
-              "choices":{
-                  "0": { "text": "up" },
-                  "1": { "text": "on" },
-                  "2": { "text": "over" },
-                  "3": { "text": "off" }
-              }
-          },
-          {
-              "text": '“you want me to go shopping with you ?” Yes, I want you to help me pick…..some shoes.',
-              "answer_key": "0",
-              "choices":{
-                  "0": { "text": "out" },
-                  "1": { "text": "at" },
-                  "2": { "text": "in" },
-                  "3": { "text": "on" }
-              }
-          },
-          {
-              "text": '“We haven’t seen Pomtip for ages.” “Oh, yesterday I ran……..her at Siam Square.” ',
-              "answer_key": "0",
-              "choices":{
-                  "0": { "text": "into" },
-                  "1": { "text": "to" },
-                  "2": { "text": "for" },
-                  "3": { "text": "upon" }
-              }
-          },
-          {
-              "text": "The fire which broke…..at Sam Yeak caused great damage.",
-              "answer_key": "1",
-              "choices":{
-                  "0": { "text": "out" },
-                  "1": { "text": "in" },
-                  "2": { "text": "off" },
-                  "3": { "text": "down" }
+                  "0": { "text": "ซื่อสัตย์กับตัวเอง" },
+                  "1": { "text": "ได้เรียนรู้และเชี่ยวชาญในศาสตร์แขนงใดแขนงหนึ่ง" },
+                  "2": { "text": "ประสบความสำเร็จ มีผู้คนชื่นชอบคุณ" },
+                  "3": { "text": "แข็งแกร่งและเป็นผู้นำ คอยควบคุมผู้อื่น" }
               }
           }
       ]
@@ -271,7 +154,7 @@
   var timerSeconds = new Date().getTime()
   var nextTime = 0
   var qt_id=0
-  var max_qt = 9;
+  var max_qt = 3;
   var action = 0
 
   $().ready(function(){
@@ -283,11 +166,12 @@
           console.log(score++)
         }
         action = 1 ;
+        ++qt_id
       })
   })
   function setQuestion(){
 
-      $('#qt_text').text(data['questions'][qt_id]['text'] +" "+(parseInt(data['questions'][qt_id]['answer_key'])+1))
+      $('#qt_text').text(data['questions'][qt_id]['text'])
 
       setChoices(data['questions'][qt_id]['choices'])
 
@@ -306,43 +190,17 @@
     $(".WaitQ").hide();
     $(".DoQ").fadeOut(200,function(){
       $(".DoQ").fadeIn(500,function(){
-        ++qt_id
-        let timer = setInterval(function () {
-            timerSeconds = Math.ceil((nextTime - new Date().getTime()) / 1000)
-            $('#timer').text(formatTime())
-            if (timerSeconds <= 0 || action) {
-                action = 0 ;
-                $('#timer').text('Time out!')
-                clearInterval(timer);
-                if(max_qt > qt_id-1){
-                  setQuestion()
-                }
-                else{
-                  $("#qt_text").text("เกมประลองปัญญาด้าน PHP")
-                    $("#score").text(score)
-                      $("#maxscore").text(max_qt+1)
-                        if(score == 6 || score == 7){
-                          $(".Star").append('<br> got +2 <i class="fas fa-star"></i>')
-                        }
-                        else if(score == 8 || score == 9){
-                          $(".Star").append('<br> got +3 <i class="fas fa-star"></i>')
-                        }
-                        else if(score == 10){
-                          $(".Star").append('<br> got +5 <i class="fas fa-star"></i>')
-                        }
-                        else if(score <= 3){
-                          $(".Star").append('<br> got -1 <i class="fas fa-star"></i>')
-                        }
-                        else{
-                          $(".Star").append('<br> got 0 <i class="fas fa-star"></i>')
-                        }
-                  $(".DoQ").fadeOut(200,function(){
-                    $(".EndQ").fadeIn(500,function(){
-                    })
-                  })
-                }
-            }
-        }, 100);
+        if(max_qt > qt_id-1){
+            setQuestion()
+        }
+        else{
+            $("#qt_text").text("Enneagram Quiz")
+            $(".DoQ").fadeOut(200,function(){
+            $(".EndQ").fadeIn(500,function(){
+            })
+            })
+        }
+        
       })
     })
   }
