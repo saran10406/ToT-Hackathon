@@ -322,7 +322,7 @@
                   setQuestion()
                 }
                 else{
-                  $("#qt_text").text("เกมประลองปัญญาด้าน PHP")
+                  $("#qt_text").text("เกมประลองปัญญาด้าน English")
                     $("#score").text(score)
                       $("#maxscore").text(max_qt+1)
                         if(score == 6 || score == 7){

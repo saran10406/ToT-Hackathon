@@ -4,6 +4,8 @@
     exit();
   }
   $_SESSION['Check'] = 1;
+   $_SESSION["English"] =0;
+     $_SESSION["Star_English"] =0;
  ?>
 <script src="js/auth.js"></script>
 <div class="row justify-content-md-center">
