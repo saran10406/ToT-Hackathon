@@ -55,10 +55,10 @@ error_reporting(~E_NOTICE);
         }else{
           echo '<li class="nav-item"><a class="nav-link" href="./?p=home"><i class="fas fa-home"></i> HOME <span class="sr-only">(current)</span></a></li>';
         }
-        if($_GET['p'] == 'about'){
-          echo '<li class="nav-item active"><a class="nav-link" href="./?p=about"><i class="fas fa-user-tie"></i> ABOUT</a></li>';
+        if($_GET['p'] == 'challenge'){
+          echo '<li class="nav-item active"><a class="nav-link" href="./?p=challenge"><i class="fas fa-trophy"></i> CHALLENGE</a></li>';
         }else{
-          echo '<li class="nav-item "><a class="nav-link" href="./?p=about"><i class="fas fa-user-tie"></i> ABOUT</a></li>';
+          echo '<li class="nav-item "><a class="nav-link" href="./?p=challenge"><i class="fas fa-trophy"></i> CHALLENGE</a></li>';
         }
         if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
           if($_GET['p'] == 'login'){
@@ -90,8 +90,8 @@ error_reporting(~E_NOTICE);
           include("home.php");
         }else if($_GET['p'] == 'login'){
           include("login.php");
-        }else if($_GET['p'] == 'about'){
-          include("about.php");
+        }else if($_GET['p'] == 'challenge'){
+          include("challenge.php");
         }else if($_GET['p'] == 'game'){
           include("game.php");
         }else if($_GET['p'] == 'true'){
